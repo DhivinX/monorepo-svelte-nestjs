@@ -1,0 +1,16 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "eamodio.gitlens",
+    "wayou.vscode-todo-highlight",
+    "syler.sass-indented",
+    "editorconfig.editorconfig",
+    "eg2.vscode-npm-script",
+    "platformio.platformio-ide",
+    "ms-python.python",
+    "tomoki1207.pdf",
+    "visualstudioexptteam.vscodeintellicode",
+    "pkief.material-icon-theme",
+    "svelte.svelte-vscode",
+  ]
+}

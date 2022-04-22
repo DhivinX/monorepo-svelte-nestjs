@@ -1,0 +1,19 @@
+{
+  "name": "@monorepo-starter/common",
+  "private": true,
+  "version": "0.0.0",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc --build tsconfig.json",
+    "clean": "rimraf ./dist"
+  },
+  "devDependencies": {
+    "typescript": "4.6.3",
+    "rimraf": "^3.0.2"
+  }
+}
