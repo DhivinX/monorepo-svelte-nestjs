@@ -69,18 +69,23 @@ npm run server:dev
 
 ```
 
-* `dbaeumer.vscode-eslint` - VS Code ESLint extension.
-* `eamodio.gitlens` - GitLens — Git supercharged.
-* `wayou.vscode-todo-highlight` - TODO Highlight.
+### Required
+
+* `svelte.svelte-vscode` - Svelte for VS Code.
 * `syler.sass-indented` - Sass syntax highlighting.
+* `dbaeumer.vscode-eslint` - VS Code ESLint extension.
 * `editorconfig.editorconfig` - EditorConfig for VS Code.
-* `eg2.vscode-npm-script` - Supports running npm scripts defined in the package.json file.
+* `visualstudioexptteam.vscodeintellicode` - IntelliCode
+* `eamodio.gitlens` - GitLens — Git supercharged.
+
+### Optional
+
 * `platformio.platformio-ide` - PlatformIO IDE. Collaborative platform for embedded development.
 * `ms-python.python` - Python extension.
+* `wayou.vscode-todo-highlight` - TODO Highlight.
+* `eg2.vscode-npm-script` - Supports running npm scripts defined in the package.json file.
 * `tomoki1207.pdf` - Display pdf in VS Code.
-* `visualstudioexptteam.vscodeintellicode` - IntelliCode
 * `pkief.material-icon-theme` - Material Icon Theme in VS Code.
-* `svelte.svelte-vscode` - Svelte for VS Code.
 
 ## Visual Studio Code settings
 
