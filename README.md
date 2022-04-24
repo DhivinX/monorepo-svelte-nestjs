@@ -22,7 +22,7 @@ Suggest to install [nest-cli](https://docs.nestjs.com/cli/overview) globally in 
 ```bash
 
 # 1. Clone the repository
-git clone https://github.com/NanoSpaceLab/monorepo-starter.git project-name
+git clone https://github.com/DhivinX/monorepo-starter.git project-name
 
 # 2. Install the project and all its dependencies
 npm i
