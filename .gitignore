@@ -66,4 +66,4 @@ typings/
 lib/
 *.tsbuildinfo
 dist/
-packages/server/config.yaml
+apps/server/config.yaml
