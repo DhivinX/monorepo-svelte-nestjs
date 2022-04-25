@@ -1,10 +1,13 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule, TypeOrmModuleOptions } from '@nestjs/typeorm';
-import config from '../config';
+import config from './config';
+import { UsersModule } from './users/users.module';
 
 @Module({
     imports: [
+        UsersModule,
+        
         ConfigModule.forRoot({
             load: [config],
             isGlobal: true,

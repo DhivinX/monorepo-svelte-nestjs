@@ -18,9 +18,8 @@
     "strict": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-		"importsNotUsedAsValues": "error",
-		"isolatedModules": true,
 		"preserveValueImports": true,
+    "forceConsistentCasingInFileNames": true,
     
 		"baseUrl": "./",
   }

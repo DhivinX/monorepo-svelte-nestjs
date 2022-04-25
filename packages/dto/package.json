@@ -1,5 +1,5 @@
 {
-  "name": "@monorepo-starter/common",
+  "name": "@monorepo-starter/dto",
   "private": true,
   "version": "0.0.0",
   "files": [

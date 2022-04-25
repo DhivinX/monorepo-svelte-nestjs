@@ -5,8 +5,8 @@ import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import typescript from '@rollup/plugin-typescript';
 import css from 'rollup-plugin-css-only';
-import pkg from "./package.json";
 import svelteConfig from './svelte.config';
+//import pkg from "./package.json";
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -44,7 +44,7 @@ function typeCheck() {
 
 export default {
 	input: 'src/main.ts',
-    external: Object.keys(pkg.dependencies),
+    //external: Object.keys(pkg.dependencies),
 
 	output: {
 		sourcemap: true,

@@ -10,13 +10,13 @@
     "apps/*"
   ],
   "scripts": {
-    "install": "npm run dependencies:build",
-    "web:dev": "npm run serve --workspace=@monorepo-starter/web",
-    "server:dev": "npm run serve --workspace=@monorepo-starter/server",
+    "packages:build": "npm run build -w @monorepo-starter/dto -w @monorepo-starter/interfaces",
+    "install": "npm run packages:build",
+    "web:dev": "npm run serve -w @monorepo-starter/web",
+    "server:dev": "npm run serve -w @monorepo-starter/server",
     "all:build": "npm run build --workspaces",
     "all:clean": "npm run clean --workspaces",
-    "binary:build": "node scripts/build-binary.js",
-    "dependencies:build": "npm run build --workspace=@monorepo-starter/common"
+    "binary:build": "node scripts/build-binary.js"
   },
   "dependencies": {
     "shelljs": "^0.8.5"

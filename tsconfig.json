@@ -3,8 +3,8 @@
 		"baseUrl": "./",
 
     "paths": {
-      "@monorepo-starter/common": [
-        "packages/common"
+      "@monorepo-starter/*": [
+        "packages/*"
       ]
     }
   }
