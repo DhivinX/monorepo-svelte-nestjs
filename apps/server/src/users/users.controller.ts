@@ -1,10 +1,12 @@
-import { UsersResponse } from "@monorepo-starter/interfaces";
-import { Controller, Get } from "@nestjs/common";
-import { UserService } from "./users.service";
+import { UsersResponse } from '@monorepo-starter/interfaces';
+import { Controller, Get, UseGuards } from '@nestjs/common';
+import { AuthGuard } from '@nestjs/passport';
+import { UserService } from './users.service';
 
 @Controller('/users')
+@UseGuards(AuthGuard('jwt'))
 export class UsersController{
-    constructor(private usersService: UserService){}
+    constructor(private readonly usersService: UserService){}
 
     @Get('/')
     async getUsers(): Promise<UsersResponse>{

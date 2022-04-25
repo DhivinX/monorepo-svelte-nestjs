@@ -1,11 +1,22 @@
 http:
   port: 3000
+  domain: 'localhost'
+  secure: false
+  credentials:
+    key: null
+    cert: null
+    ca: null
 
 db:
   type: 'postgres'
   host: 'localhost'
   port: 5432
-  database: 'dbname'
+  database: ''
   username: ''
   password: ''
   synchronize: true
+
+keys:
+  pwdsalt: ''
+  jwt: ''
+
