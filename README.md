@@ -40,7 +40,7 @@ npm run server:dev
 
 ## Top-Level Scripts
  
-* `dependencies:build` - build dependencies packages like: Common
+* `packages:build` - build dependencies packages like: Common
 * `web:dev` - run frontend with hot reload
 * `server:dev` - run backend with hot reload
 * `all:build` - build all packages in workspace
@@ -96,6 +96,7 @@ Disables top-level scripts for packages from the npm script panel.
 {
   "npm.exclude": [
     "**/packages/**",
+    "**/apps/**",
   ]
 }
 
