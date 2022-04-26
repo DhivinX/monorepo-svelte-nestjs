@@ -9,11 +9,15 @@
   "types": "dist/index.d.ts",
   "license": "MIT",
   "scripts": {
-    "build": "tsc --build tsconfig.json",
-    "clean": "rimraf ./dist"
+    "lib:build": "tsc --build tsconfig.build.json",
+    "lib:clean": "rimraf ./dist",
+    "lib:lint": "eslint \"src/**/*.ts\" --fix"
   },
   "devDependencies": {
     "typescript": "4.6.3",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "@typescript-eslint/eslint-plugin": "^5.21.0",
+    "@typescript-eslint/parser": "^5.21.0",
+    "eslint": "^8.14.0"
   }
 }

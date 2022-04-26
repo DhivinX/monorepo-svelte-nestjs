@@ -3,12 +3,7 @@
 
   "compilerOptions": {
     "baseUrl": "./",
-
-    "declaration": false,
-    "incremental": false,
-
-    "module": "esnext",
-    "preserveValueImports": true
+    "module": "esnext"
   },
   
 	"include": [
@@ -17,5 +12,9 @@
 		"src/**/*.svelte"
 	],
 
-  "exclude": ["node_modules/*", "__sapper__/*", "public/*"]
+  "exclude": [
+    "node_modules", 
+    "__sapper__",
+    "public"
+  ]
 }

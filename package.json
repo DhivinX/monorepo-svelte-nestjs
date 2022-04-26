@@ -1,7 +1,7 @@
 {
   "name": "monorepo-starter",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "",
   "author": "",
   "license": "MIT",
@@ -10,13 +10,15 @@
     "apps/*"
   ],
   "scripts": {
-    "libs:build": "npm run build -w @monorepo-starter/dto -w @monorepo-starter/interfaces",
     "install": "npm run libs:build",
     "web:dev": "npm run serve -w @monorepo-starter/web",
     "server:dev": "npm run serve -w @monorepo-starter/server",
-    "all:build": "npm run build --workspaces",
-    "all:clean": "npm run clean --workspaces",
-    "binary:build": "node scripts/build-binary.js"
+    "libs:build": "npm run lib:build --workspaces --if-present",
+    "libs:clean": "npm run lib:clean --workspaces --if-present",
+    "libs:lint": "npm run lib:lint --workspaces --if-present",
+    "apps:build": " npm run build --workspaces --if-present",
+    "apps:clean": "npm run clean --workspaces --if-present",
+    "apps:lint": "npm run lint --workspaces --if-present"
   },
   "dependencies": {
     "shelljs": "^0.8.5"

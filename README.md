@@ -1,25 +1,25 @@
 <p align="center">
-<a href="https://svelte.dev" target="blank"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Svelte_Logo.svg" width="100" alt="Svelte Logo" /></a>
+  <a href="https://svelte.dev" target="blank"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Svelte_Logo.svg" width="100" alt="Svelte Logo" /></a>
   <a href="https://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
 </p>
 
-# monorepo-starter
+# Svelte NestJS Typescript Monorepo Starter
 
-### Svelte NestJS Typescript Monorepo Starter
+## Description
 
 * [NPM](https://docs.npmjs.com/cli/v7/using-npm/workspaces) workspaces to manage monorepo
 * Full Stack: Front End, Server, Common module packages   
-* Front End package: [Svelte](https://svelte.dev/docs) [rollup.js](https://rollupjs.org/guide/en/)
-* Server package: [NestJS](https://docs.nestjs.com) [nest-cli](https://docs.nestjs.com/cli/overview)
+* Front End package: [Svelte](https://svelte.dev/docs) | [rollup.js](https://rollupjs.org/guide/en/)
+* Server package: [NestJS](https://docs.nestjs.com) | [nest-cli](https://docs.nestjs.com/cli/overview)
 * Common package: common code used in both Front End and Server
 
 ## TODO
 
-- [x] Configure NPM workspaces
-- [x] Configure .gitignore
-- [x] Configure global tsconfig related to apps and packages
-- [x] Create npm scripts
-- [ ] Configure ESLint
+- [X] Configure NPM workspaces
+- [X] Configure .gitignore
+- [X] Configure global tsconfig related to apps and libs
+- [X] Create npm scripts
+- [X] Configure ESLint
 - [ ] Script to create binaries from apps
 
 ## Prerequisites
@@ -33,7 +33,7 @@ Suggest to install [nest-cli](https://docs.nestjs.com/cli/overview) globally in 
 # 1. Clone the repository
 git clone https://github.com/DhivinX/monorepo-starter.git project-name
 
-# 2. Install the project and all its dependencies
+# 2. Install the project and build packages in libs folder
 npm i
 
 # 3. Enter your newly-cloned folder
@@ -49,11 +49,14 @@ npm run server:dev
 
 ## Top-Level Scripts
  
-* `libs:build` - build dependencies libs like: Common
 * `web:dev` - run frontend with hot reload
 * `server:dev` - run backend with hot reload
-* `all:build` - build all packages in workspace
-* `all:clean` - clear all dist / build from packages in the workspace
+* `libs:build` - build packages in `libs` folder
+* `libs:clean` - clean packages in `libs` folder
+* `libs:lint` - lint packages in `libs` folder
+* `apps:build` - build packages in `apps` folder
+* `apps:clean` - clean packages in `apps` folder
+* `apps:lint` - lint packages in `apps` folder
 
 ## Visual Studio Code extensions
 
@@ -85,7 +88,7 @@ npm run server:dev
 * `dbaeumer.vscode-eslint` - VS Code ESLint extension.
 * `editorconfig.editorconfig` - EditorConfig for VS Code.
 * `visualstudioexptteam.vscodeintellicode` - IntelliCode
-* `eamodio.gitlens` - GitLens — Git supercharged.
+* `eamodio.gitlens` - GitLens - Git supercharged.
 
 ### Optional
 

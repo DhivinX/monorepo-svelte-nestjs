@@ -1,16 +1,7 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
-
-    "paths": {
-      "@monorepo-starter/*": [
-        "libs/*"
-      ]
-    },
-
     "module": "commonjs",
     "target": "es2017",
-
     "declaration": true,
     "removeComments": true,
     "emitDecoratorMetadata": true,
@@ -19,7 +10,7 @@
     "esModuleInterop": true,
     "sourceMap": true,
     "incremental": true,
-    "skipLibCheck": true,
+    "skipLibCheck": false,
     "strictNullChecks": false,
     "noImplicitAny": false,
     "strictBindCallApply": false,
@@ -27,6 +18,14 @@
     "noFallthroughCasesInSwitch": false,
     "moduleResolution": "node",
     "strict": true,
-    "types": ["node", "svelte"]
+    "types": ["node", "svelte"],
+
+    "baseUrl": "./",
+
+    "paths": {
+      "@monorepo-starter/*": [
+        "libs/*/src"
+      ]
+    }
   }
 }

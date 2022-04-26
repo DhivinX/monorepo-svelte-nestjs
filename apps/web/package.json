@@ -1,6 +1,6 @@
 {
   "name": "@monorepo-starter/web",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -8,7 +8,8 @@
     "build": "rollup -c",
     "start": "sirv public --no-clear --dev --single --host",
     "check": "svelte-check --tsconfig ./tsconfig.build.json",
-    "clean": "rimraf ./public/build"
+    "clean": "rimraf ./public/build",
+    "lint": "eslint \"src/**/*.{ts,svelte}\" --fix"
   },
   "dependencies": {
     "axios": "^0.26.1",
@@ -21,6 +22,10 @@
     "@rollup/plugin-node-resolve": "^13.2.1",
     "@rollup/plugin-typescript": "^8.3.2",
     "@tsconfig/svelte": "^3.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.21.0",
+    "@typescript-eslint/parser": "^5.21.0",
+    "eslint": "^8.14.0",
+    "eslint-plugin-svelte3": "^3.4.1",
     "rollup": "^2.70.2",
     "rollup-plugin-css-only": "^3.1.0",
     "rollup-plugin-livereload": "^2.0.5",
