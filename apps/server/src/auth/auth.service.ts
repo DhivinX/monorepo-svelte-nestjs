@@ -1,7 +1,7 @@
 import { UserLoginDto } from '@monorepo-starter/dto';
 import { ConfigService } from '@nestjs/config';
-import { User } from 'src/users/user.entity';
-import { hashPassword } from 'src/_utils/hash-password';
+import { User } from 'users/user.entity';
+import { hashPassword } from '_utils/hash-password';
 import { Injectable, UnauthorizedException } from '@nestjs/common';
 import { Response } from 'express';
 import { v4 as uuid } from 'uuid';

@@ -28,7 +28,7 @@ import { AuthModule } from './auth/auth.module';
                     username: configService.get<string>('db.username'),
                     password: configService.get<string>('db.password'),
                     synchronize: configService.get<boolean>('db.synchronize'),
-                    autoLoadEntities: true,
+                    autoLoadEntities: true
                 } as TypeOrmModuleOptions;
             }
         }),

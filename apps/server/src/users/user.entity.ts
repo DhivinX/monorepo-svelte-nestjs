@@ -29,4 +29,9 @@ export class User extends BaseEntity{
         default: true
     })
     isActive: boolean;
+
+    @Column({
+        default: () => "CURRENT_TIMESTAMP"
+    })
+    createdAt: Date;
 }

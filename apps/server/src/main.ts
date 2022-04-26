@@ -1,21 +1,23 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { ConfigService } from '@nestjs/config';
-import * as cookieParser from 'cookie-parser';
+import cookieParser from 'cookie-parser';
+import helmet from 'helmet';
+import { ValidationPipe } from '@nestjs/common';
 
 async function bootstrap() {
-    const app = await NestFactory.create(AppModule);
+    const app = await NestFactory.create(AppModule, {
+        cors: true
+    });
 
     const configService = app.get(ConfigService);
 
     //app.setGlobalPrefix('/api');
 
+    app.use(helmet());
     app.use(cookieParser());
-
-    app.enableCors({
-        credentials: true, //configService.get<boolean>('http.secure'),
-        origin: configService.get<string>('http.domain')
-    });
+    
+    app.useGlobalPipes(new ValidationPipe());
 
     await app.listen(configService.get<number>('http.port'));
 }

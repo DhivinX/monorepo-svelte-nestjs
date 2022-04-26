@@ -2,7 +2,7 @@ import { UserResponse, UsersResponse } from '@monorepo-starter/interfaces';
 import { UserCreateDto } from '@monorepo-starter/dto';
 import { Injectable } from '@nestjs/common';
 import { User } from './user.entity';
-import { hashPassword } from 'src/_utils/hash-password';
+import { hashPassword } from '_utils/hash-password';
 import { ConfigService } from '@nestjs/config';
 
 @Injectable()
@@ -21,6 +21,8 @@ export class UserService{
         user.hash = hashPassword(newUser.password, this.configService.get<string>('keys.pwdsalt'));
         user.firstName = newUser.firstName;
         user.lastName = newUser.lastName;
+
+        console.log(user)
 
         await user.save();
         return this.userFilter(user);

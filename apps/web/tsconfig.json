@@ -20,7 +20,10 @@
     "experimentalDecorators": true,
 		"preserveValueImports": true,
     "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
     
-		"baseUrl": "./",
-  }
+		"baseUrl": "./src",
+
+    "types": ["node", "svelte"],
+  },
 }
