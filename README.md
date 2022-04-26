@@ -13,6 +13,15 @@
 * Server package: [NestJS](https://docs.nestjs.com) [nest-cli](https://docs.nestjs.com/cli/overview)
 * Common package: common code used in both Front End and Server
 
+## TODO
+
+- [x] Configure NPM workspaces
+- [x] Configure .gitignore
+- [x] Configure global tsconfig related to apps and packages
+- [x] Create npm scripts
+- [ ] Configure ESLint
+- [ ] Script to create binaries from apps
+
 ## Prerequisites
 
 Suggest to install [nest-cli](https://docs.nestjs.com/cli/overview) globally in dev environment.
