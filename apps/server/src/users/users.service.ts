@@ -2,7 +2,7 @@ import { UserResponse, UsersResponse } from '@monorepo-starter/interfaces';
 import { UserCreateDto } from '@monorepo-starter/dto';
 import { Injectable } from '@nestjs/common';
 import { User } from './user.entity';
-import { hashPassword } from '_utils/hash-password';
+import { hashPassword } from 'src/_utils/hash-password';
 import { ConfigService } from '@nestjs/config';
 
 @Injectable()

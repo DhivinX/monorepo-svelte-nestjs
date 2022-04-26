@@ -7,7 +7,7 @@
     "serve": "rollup -c -w",
     "build": "rollup -c",
     "start": "sirv public --no-clear --dev --single --host",
-    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "check": "svelte-check --tsconfig ./tsconfig.build.json",
     "clean": "rimraf ./public/build"
   },
   "dependencies": {

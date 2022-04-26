@@ -2,7 +2,11 @@ import sveltePreprocess from 'svelte-preprocess';
 
 function createPreprocessors(sourceMap) {
     return sveltePreprocess({
-        sourceMap
+        sourceMap,
+
+        typescript: {
+            tsconfigFile: './tsconfig.build.json',
+        }
     });
 }
 
