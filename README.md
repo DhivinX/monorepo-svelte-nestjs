@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" style="padding:0px 20px;" /></a>
-  <a href="https://svelte.dev" target="blank"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Svelte_Logo.svg" width="100" alt="Svelte Logo" style="padding:0px 20px;" /></a>
+<a href="https://svelte.dev" target="blank"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Svelte_Logo.svg" width="100" alt="Svelte Logo" /></a>
+  <a href="https://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
 </p>
 
 # monorepo-starter
@@ -49,7 +49,7 @@ npm run server:dev
 
 ## Top-Level Scripts
  
-* `packages:build` - build dependencies packages like: Common
+* `libs:build` - build dependencies libs like: Common
 * `web:dev` - run frontend with hot reload
 * `server:dev` - run backend with hot reload
 * `all:build` - build all packages in workspace

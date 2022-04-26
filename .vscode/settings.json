@@ -1,6 +1,6 @@
 {
   "npm.exclude": [
-    "**/packages/**",
+    "**/libs/**",
     "**/apps/**",
   ]
 }

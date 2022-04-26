@@ -6,12 +6,12 @@
   "author": "",
   "license": "MIT",
   "workspaces": [
-    "packages/*",
+    "libs/*",
     "apps/*"
   ],
   "scripts": {
-    "packages:build": "npm run build -w @monorepo-starter/dto -w @monorepo-starter/interfaces",
-    "install": "npm run packages:build",
+    "libs:build": "npm run build -w @monorepo-starter/dto -w @monorepo-starter/interfaces",
+    "install": "npm run libs:build",
     "web:dev": "npm run serve -w @monorepo-starter/web",
     "server:dev": "npm run serve -w @monorepo-starter/server",
     "all:build": "npm run build --workspaces",
