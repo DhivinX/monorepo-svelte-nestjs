@@ -1,21 +1,20 @@
 <script lang="ts">
-import { UserLoginDto } from '@monorepo-starter/dto';
-import { transformAndValidate } from 'class-transformer-validator';
 import { onMount } from 'svelte';
+import { Api } from './api';
+import { UserLoginDto } from '@monorepo-starter/dto';
 
 onMount(async () => {
     const loginData: UserLoginDto = {
-        email: '',
-        password: '',
+        email: 'admin@admin.com',
+        password: '123456',
     };
 
-    try {
-        await transformAndValidate(UserLoginDto, loginData);
-    } catch (err) {
-        console.log(err);
-    }
+    await Api.auth.login(loginData);
 });
 </script>
+
+<main class="main">
+</main>
 
 <style lang="scss">
     .main{
@@ -23,7 +22,3 @@ onMount(async () => {
         padding: 0;
     }
 </style>
-
-<main class="main">
-    
-</main>

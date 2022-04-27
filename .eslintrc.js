@@ -1,10 +1,11 @@
 module.exports = {
+    root: true,
+    
     parser: '@typescript-eslint/parser',
 
     extends: [
         'eslint:recommended',
         'plugin:@typescript-eslint/recommended',
-        'plugin:@typescript-eslint/recommended-requiring-type-checking',
         'plugin:prettier/recommended'
     ],
 
@@ -26,7 +27,8 @@ module.exports = {
     rules:{
         'prettier/prettier': ['warn', {
             tabWidth: 4,
-            singleQuote: true
+            singleQuote: true,
+            endOfLine: 'auto'
         }],
 
         '@typescript-eslint/interface-name-prefix': 'off',
