@@ -1,12 +1,8 @@
 module.exports = {
-    parser: '@typescript-eslint/parser',
-    
     root: true,
 
     extends: [
-        'eslint:recommended',
-        'plugin:@typescript-eslint/recommended',
-        'plugin:@typescript-eslint/recommended-requiring-type-checking'
+        '../../.eslintrc.js',
     ],
 
     parserOptions: {
@@ -17,21 +13,6 @@ module.exports = {
         extraFileExtensions: ['.svelte']
     },
 
-    env: {
-        es6: true,
-        browser: true
-    },
-
-    settings: {
-        'svelte3/typescript': () => require('typescript'),
-        'svelte3/ignore-styles': () => true
-    },
-
-    plugins: [
-        'svelte3', 
-        '@typescript-eslint'
-    ],
-
     ignorePatterns: [
         '.eslintrc.cjs',
         'rollup.config.js',
@@ -40,17 +21,19 @@ module.exports = {
         'public'
     ],
 
+    plugins: [
+        'svelte3'
+    ],
+
+    settings: {
+        'svelte3/typescript': () => require('typescript'),
+        'svelte3/ignore-styles': () => true
+    },
+
     overrides: [
         {
             files: ['**/*.svelte'],
-            processor: 'svelte3/svelte3',
-            rules:{
-                semi: ['error', 'always'],
-            }
+            processor: 'svelte3/svelte3'
         }
     ],
-
-    rules:{
-        semi: ['error', 'always'],
-    }
 };

@@ -9,7 +9,7 @@ import { AuthModule } from './auth/auth.module';
     imports: [
         AuthModule,
         UsersModule,
-        
+
         ConfigModule.forRoot({
             load: [config],
             isGlobal: true,
@@ -18,7 +18,7 @@ import { AuthModule } from './auth/auth.module';
         TypeOrmModule.forRootAsync({
             imports: [ConfigModule],
             inject: [ConfigService],
-            
+
             useFactory: async (configService: ConfigService) => {
                 return {
                     type: configService.get<string>('db.type'),
@@ -28,9 +28,9 @@ import { AuthModule } from './auth/auth.module';
                     username: configService.get<string>('db.username'),
                     password: configService.get<string>('db.password'),
                     synchronize: configService.get<boolean>('db.synchronize'),
-                    autoLoadEntities: true
+                    autoLoadEntities: true,
                 } as TypeOrmModuleOptions;
-            }
+            },
         }),
     ],
 

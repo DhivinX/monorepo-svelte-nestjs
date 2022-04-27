@@ -43,6 +43,7 @@ function typeCheck() {
 }
 
 export default {
+    context: 'window',
 	input: 'src/main.ts',
     //external: Object.keys(pkg.dependencies),
 

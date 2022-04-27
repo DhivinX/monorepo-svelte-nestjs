@@ -4,8 +4,8 @@ import { AuthService } from './auth.service';
 import { Response } from 'express';
 
 @Controller('/auth')
-export class AuthController{
-    constructor(private readonly authService: AuthService){}
+export class AuthController {
+    constructor(private readonly authService: AuthService) {}
 
     @Post('/login')
     async login(

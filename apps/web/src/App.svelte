@@ -1,13 +1,19 @@
 <script lang="ts">
-import { UserResponse, UsersResponse } from "@monorepo-starter/interfaces";
-import { onMount } from "svelte";
-import { getUsers } from "./api";
-
-let users: UserResponse[];
+import { UserLoginDto } from '@monorepo-starter/dto';
+import { transformAndValidate } from 'class-transformer-validator';
+import { onMount } from 'svelte';
 
 onMount(async () => {
-    let data: UsersResponse = await getUsers();
-    users = data.users;
+    const loginData: UserLoginDto = {
+        email: '',
+        password: '',
+    };
+
+    try {
+        await transformAndValidate(UserLoginDto, loginData);
+    } catch (err) {
+        console.log(err);
+    }
 });
 </script>
 
@@ -19,5 +25,5 @@ onMount(async () => {
 </style>
 
 <main class="main">
-    {JSON.stringify(users)}
+    
 </main>

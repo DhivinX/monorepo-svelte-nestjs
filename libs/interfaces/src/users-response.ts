@@ -1,5 +1,5 @@
-import { UserResponse } from "./user-response";
+import { UserResponse } from './user-response';
 
-export interface UsersResponse{
-    users: UserResponse[]
+export interface UsersResponse {
+    users: UserResponse[];
 }

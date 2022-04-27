@@ -5,7 +5,7 @@
     "baseUrl": "./",
     "outDir": "./dist"
   },
-
+  
   "include": [
 		"src/**/*.js",
 		"src/**/*.ts"

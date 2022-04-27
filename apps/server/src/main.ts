@@ -7,7 +7,7 @@ import { ValidationPipe } from '@nestjs/common';
 
 async function bootstrap() {
     const app = await NestFactory.create(AppModule, {
-        cors: true
+        cors: true,
     });
 
     const configService = app.get(ConfigService);
@@ -16,7 +16,7 @@ async function bootstrap() {
 
     app.use(helmet());
     app.use(cookieParser());
-    
+
     app.useGlobalPipes(new ValidationPipe());
 
     await app.listen(configService.get<number>('http.port'));
