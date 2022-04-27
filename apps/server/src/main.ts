@@ -1,21 +1,33 @@
 import { NestFactory } from '@nestjs/core';
-import { AppModule } from './app.module';
 import { ConfigService } from '@nestjs/config';
 import cookieParser from 'cookie-parser';
 import helmet from 'helmet';
-import { ValidationPipe } from '@nestjs/common';
+import morgan from 'morgan';
+import { ValidationPipe, Logger } from '@nestjs/common';
+import { AppModule } from './app.module';
 
 async function bootstrap() {
-    const app = await NestFactory.create(AppModule, {
-        cors: true,
-    });
+    const app = await NestFactory.create(AppModule);
 
     const configService = app.get(ConfigService);
 
     //app.setGlobalPrefix('/api');
 
+    app.enableCors({
+        origin: configService.get<string[]>('http.cors'),
+        credentials: true,
+    });
+
     app.use(helmet());
     app.use(cookieParser());
+
+    app.use(
+        morgan('tiny', {
+            stream: {
+                write: (message: string) => Logger.log(message),
+            },
+        })
+    );
 
     app.useGlobalPipes(new ValidationPipe());
 
