@@ -6,6 +6,8 @@ http:
     key: null
     cert: null
     ca: null
+  cors: 
+    - 'http://localhost:8080'
 
 db:
   type: 'postgres'
