@@ -1,10 +1,12 @@
-import { Api } from './api';
+import { Client } from './client';
 import { AuthModule } from './modules/auth.module';
 
-const $api = new Api({
-    baseUrl: 'http://localhost:3000',
+const client = new Client({
+    baseURL: 'http://localhost:3000',
+    withCredentials: true,
 });
 
-$api.registerModule(AuthModule);
-
-export { $api };
+export const Api = {
+    client,
+    auth: new AuthModule(client),
+};

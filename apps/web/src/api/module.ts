@@ -1,13 +1,5 @@
-import { AxiosInstance } from 'axios';
-
-export interface ModuleOptions {
-    http: AxiosInstance;
-}
+import { Client } from './client';
 
 export class Module {
-    protected http: AxiosInstance;
-
-    constructor(options: ModuleOptions) {
-        this.http = options.http;
-    }
+    constructor(protected readonly client: Client) {}
 }
