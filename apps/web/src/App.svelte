@@ -1,4 +1,15 @@
 <script lang="ts">
+import { onMount } from 'svelte';
+import { Api } from './api';
+
+onMount(async () => {
+    const res = await Api.auth.login({
+        email: '',
+        password: '',
+    });
+
+    console.log('ok');
+});
 </script>
 
 <main class="main">

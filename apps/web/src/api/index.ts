@@ -1,12 +1,5 @@
-import { Client } from './client';
-import { AuthModule } from './modules/auth.module';
-
-const client = new Client({
-    baseURL: 'http://localhost:3000',
-    withCredentials: true,
-});
+import { AuthService } from './services/auth.service';
 
 export const Api = {
-    client,
-    auth: new AuthModule(client),
+    auth: AuthService,
 };

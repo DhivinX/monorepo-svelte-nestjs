@@ -2,8 +2,7 @@ import { NestFactory } from '@nestjs/core';
 import { ConfigService } from '@nestjs/config';
 import cookieParser from 'cookie-parser';
 import helmet from 'helmet';
-import morgan from 'morgan';
-import { ValidationPipe, Logger } from '@nestjs/common';
+import { ValidationPipe } from '@nestjs/common';
 import { AppModule } from './app.module';
 
 async function bootstrap() {
@@ -20,14 +19,6 @@ async function bootstrap() {
 
     app.use(helmet());
     app.use(cookieParser());
-
-    app.use(
-        morgan('tiny', {
-            stream: {
-                write: (message: string) => Logger.log(message),
-            },
-        })
-    );
 
     app.useGlobalPipes(new ValidationPipe());
 
