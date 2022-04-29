@@ -1,10 +1,9 @@
-import { Axios } from 'axios';
+import axios from 'axios';
+import { errorHandler, successHandler } from './handlers';
 
-const client = new Axios({
+export const client = axios.create({
     baseURL: 'http://localhost:3000',
     withCredentials: true,
 });
 
-//client.interceptors.response.use(onSuccess, onError);
-
-export { client };
+client.interceptors.response.use(successHandler, errorHandler);

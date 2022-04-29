@@ -7,19 +7,17 @@ import { sign } from 'jsonwebtoken';
 import { JwtPayload } from './jwt.strategy';
 import { User } from '../users/user.entity';
 import { hashPassword } from '../_utils/hash-password';
+import { UserResponse } from '@monorepo-starter/interfaces';
 
 @Injectable()
 export class AuthService {
     constructor(private readonly configService: ConfigService) {}
 
-    async login(loginData: UserLoginDto, response: Response): Promise<any> {
+    async login(loginData: UserLoginDto, response: Response): Promise<UserResponse> {
         const user = await User.findOne({
             where: {
                 email: loginData.email,
-                hash: hashPassword(
-                    loginData.password,
-                    this.configService.get<string>('keys.pwdsalt')
-                ),
+                hash: hashPassword(loginData.password, this.configService.get<string>('keys.pwdsalt')),
             },
         });
 
@@ -36,7 +34,7 @@ export class AuthService {
             httpOnly: true,
         });
 
-        return {};
+        return user;
     }
 
     private createToken(token: string): {
@@ -48,10 +46,7 @@ export class AuthService {
         };
 
         const expiresIn: number = 60 * 60 * 24;
-        const accessToken: string = sign(
-            payload,
-            this.configService.get<string>('keys.jwt')
-        ) as string;
+        const accessToken: string = sign(payload, this.configService.get<string>('keys.jwt')) as string;
 
         return {
             accessToken: accessToken,

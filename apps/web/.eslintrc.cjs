@@ -3,7 +3,7 @@ module.exports = {
 
     extends: [
         '../../.eslintrc.js',
-        'plugin:@typescript-eslint/recommended-requiring-type-checking',
+        //'plugin:@typescript-eslint/recommended-requiring-type-checking',
     ],
 
     parserOptions: {
@@ -34,7 +34,12 @@ module.exports = {
     overrides: [
         {
             files: ['**/*.svelte'],
-            processor: 'svelte3/svelte3'
+            processor: 'svelte3/svelte3',
+            rules: {
+                'prettier/prettier': ['off', {
+                    semi: false
+                }],
+            }
         }
     ],
 };

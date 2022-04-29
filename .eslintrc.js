@@ -6,29 +6,31 @@ module.exports = {
     extends: [
         'eslint:recommended',
         'plugin:@typescript-eslint/recommended',
-        'plugin:prettier/recommended'
+        'plugin:prettier/recommended',
     ],
 
     env: {
         es6: true,
         browser: true,
-        node: true
+        node: true,
     },
 
     plugins: [
-        '@typescript-eslint'
+        '@typescript-eslint',
     ],
 
     ignorePatterns: [
+        '.eslintrc.js',
         'node_modules',
-        'dist'
+        'dist',
     ],
 
     rules:{
         'prettier/prettier': ['warn', {
             tabWidth: 4,
             singleQuote: true,
-            endOfLine: 'auto'
+            endOfLine: 'auto',
+            printWidth: 140,
         }],
 
         '@typescript-eslint/interface-name-prefix': 'off',

@@ -1,18 +1,22 @@
 <script lang="ts">
 import { onMount } from 'svelte';
-import { Api } from './api';
+import { userStore } from './store/user.store';
+
+let { email, fullName } = userStore;
+
+function timeout(ms: number) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 onMount(async () => {
-    const res = await Api.auth.login({
-        email: '',
-        password: '',
-    });
-
-    console.log('ok');
+    await timeout(3000);
+    await userStore.login('admin@admin.com', '123456');
 });
 </script>
 
 <main class="main">
+    {$email}
+    {$fullName}
 </main>
 
 <style lang="scss">

@@ -1,5 +1,8 @@
+import { ResponseError } from './handlers';
 import { AuthService } from './services/auth.service';
 
-export const Api = {
+const Api = {
     auth: AuthService,
 };
+
+export { Api, ResponseError };
