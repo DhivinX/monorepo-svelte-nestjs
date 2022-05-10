@@ -31,7 +31,7 @@ Suggest to install [nest-cli](https://docs.nestjs.com/cli/overview) globally in 
 ```bash
 
 # 1. Clone the repository
-git clone https://github.com/DhivinX/monorepo-starter.git project-name
+git clone https://github.com/DhivinX/monorepo-svelte-nestjs.git project-name
 
 # 2. Install the project and build packages in libs folder
 npm i
@@ -116,7 +116,7 @@ Disables top-level scripts for packages from the npm script panel.
 
 ## Enhancements and Bug Reports
 
-If you find a bug, or have an enhancement in mind please post [issues](https://github.com/DhivinX/monorepo-starter/issues) on GitHub.
+If you find a bug, or have an enhancement in mind please post [issues](https://github.com/DhivinX/monorepo-svelte-nestjs/issues) on GitHub.
 
 ## License
 

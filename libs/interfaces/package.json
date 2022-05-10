@@ -1,5 +1,5 @@
 {
-  "name": "@monorepo-starter/interfaces",
+  "name": "@monorepo-svelte-nestjs/interfaces",
   "private": true,
   "version": "0.0.0",
   "files": [

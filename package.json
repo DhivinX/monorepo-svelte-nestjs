@@ -1,5 +1,5 @@
 {
-  "name": "monorepo-starter",
+  "name": "monorepo-svelte-nestjs",
   "private": true,
   "version": "0.0.0",
   "description": "",
@@ -11,8 +11,8 @@
   ],
   "scripts": {
     "install": "npm run libs:build",
-    "web:dev": "npm run serve -w @monorepo-starter/web",
-    "server:dev": "npm run serve -w @monorepo-starter/server",
+    "web:dev": "npm run serve -w @monorepo-svelte-nestjs/web",
+    "server:dev": "npm run serve -w @monorepo-svelte-nestjs/server",
     "libs:build": "npm run lib:build --workspaces --if-present",
     "libs:clean": "npm run lib:clean --workspaces --if-present",
     "libs:lint": "npm run lib:lint --workspaces --if-present",

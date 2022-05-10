@@ -1,4 +1,4 @@
-import { UserLoginDto } from '@monorepo-starter/dto';
+import { UserLoginDto } from '@monorepo-svelte-nestjs/dto';
 import { ConfigService } from '@nestjs/config';
 import { Injectable, UnauthorizedException } from '@nestjs/common';
 import { Response } from 'express';
@@ -7,7 +7,7 @@ import { sign } from 'jsonwebtoken';
 import { JwtPayload } from './jwt.strategy';
 import { User } from '../users/user.entity';
 import { hashPassword } from '../_utils/hash-password';
-import { UserResponse } from '@monorepo-starter/interfaces';
+import { UserResponse } from '@monorepo-svelte-nestjs/interfaces';
 
 @Injectable()
 export class AuthService {

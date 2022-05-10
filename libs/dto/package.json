@@ -1,5 +1,5 @@
 {
-  "name": "@monorepo-starter/dto",
+  "name": "@monorepo-svelte-nestjs/dto",
   "private": true,
   "version": "0.0.0",
   "files": [

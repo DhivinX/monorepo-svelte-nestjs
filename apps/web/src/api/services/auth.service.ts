@@ -1,5 +1,5 @@
-import { UserLoginDto } from '@monorepo-starter/dto';
-import { UserResponse } from '@monorepo-starter/interfaces';
+import { UserLoginDto } from '@monorepo-svelte-nestjs/dto';
+import { UserResponse } from '@monorepo-svelte-nestjs/interfaces';
 import { AxiosResponse } from 'axios';
 import { client } from '../client';
 

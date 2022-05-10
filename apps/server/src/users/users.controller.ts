@@ -1,4 +1,4 @@
-import { UsersResponse } from '@monorepo-starter/interfaces';
+import { UsersResponse } from '@monorepo-svelte-nestjs/interfaces';
 import { Controller, Get, UseGuards } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
 import { UserService } from './users.service';

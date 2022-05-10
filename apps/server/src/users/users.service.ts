@@ -1,5 +1,5 @@
-import { UserResponse, UsersResponse } from '@monorepo-starter/interfaces';
-import { UserCreateDto } from '@monorepo-starter/dto';
+import { UserResponse, UsersResponse } from '@monorepo-svelte-nestjs/interfaces';
+import { UserCreateDto } from '@monorepo-svelte-nestjs/dto';
 import { Injectable } from '@nestjs/common';
 import { User } from './user.entity';
 import { hashPassword } from '../_utils/hash-password';

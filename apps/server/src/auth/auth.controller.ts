@@ -1,4 +1,4 @@
-import { UserLoginDto } from '@monorepo-starter/dto';
+import { UserLoginDto } from '@monorepo-svelte-nestjs/dto';
 import { Body, Controller, Post, Res } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { Response } from 'express';
